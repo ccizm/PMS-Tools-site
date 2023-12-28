@@ -1,0 +1,18 @@
+.page,
+body {
+  background-color: var(--weui-BG-0);
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.page__hd,
+.page__bd,
+.page__ft {
+  margin-top: 10px;
+}
+
+.weui-media-box__desc {
+  -webkit-line-clamp: inherit;
+  color: var(--weui-FG-1)
+}
