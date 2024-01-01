@@ -3,6 +3,7 @@ import 'weui'
 import './style.css'
 import edgelogo from './edge.svg'
 import githublogo from '/github.svg'
+import logo from '/logo.png'
 
 document.querySelector('#app').innerHTML = `
 
@@ -19,7 +20,7 @@ document.querySelector('#app').innerHTML = `
   </div>
   <div class="page__bd">
       <div class="weui-panel weui-panel_access">
-          <div class="weui-panel__hd">安装扩展</div>
+          <div class="weui-panel__hd">浏览器扩展</div>
           <div class="weui-panel__bd">
               <a href="javascript:" class="weui-media-box weui-media-box_appmsg" id="msedgelink">
                   <div aria-hidden="true" class="weui-media-box__hd">
@@ -41,6 +42,22 @@ document.querySelector('#app').innerHTML = `
                   <div aria-hidden="true" class="weui-media-box__bd">
                       <strong class="weui-media-box__title">源文件手动安装</strong>
                       <p class="weui-media-box__desc">如无法在线安装，需自行修改扩展或手动安装，可访问 Github 下载源文件。</p>
+                  </div>
+              </a>
+          </div>
+      </div>
+      <div class="weui-panel weui-panel_access">
+          <div class="weui-panel__hd">本地版（旧）</div>
+          <div class="weui-panel__bd">
+              <a href="javascript:" class="weui-media-box weui-media-box_appmsg" id="PTlink">
+                  <div aria-hidden="true" class="weui-media-box__hd">
+                      <img class="weui-media-box__thumb"
+                          src="${logo}"
+                          alt="PMS-Tool">
+                  </div>
+                  <div aria-hidden="true" class="weui-media-box__bd">
+                      <strong class="weui-media-box__title">PMS-Tool</strong>
+                      <p class="weui-media-box__desc">无需安装插件，解压即可使用。旧版本，最后更新时间：2020/7/21 2:22</p>
                   </div>
               </a>
           </div>
@@ -74,7 +91,7 @@ document.querySelector('#app').innerHTML = `
   <div class="page__ft">
       <div class="weui-footer">
           <div class="weui-footer__text">
-              Copyright &copy; 2022 - 2023 Beida.xyz All Rights Reserved.
+              Copyright &copy; 2020 - 2024 PMS-Tool All Rights Reserved.
           </div>
       </div>
   </div>
@@ -82,9 +99,13 @@ document.querySelector('#app').innerHTML = `
 `
 
 $("#msedgelink").click(function(){
-  window.open('https://microsoftedge.microsoft.com/addons/detail/pms%E5%B7%A5%E5%85%B7%E7%AE%B1/bdlmahkjmklokkcnbcechpoafneippip')
+  window.open('https://microsoftedge.microsoft.com/addons/detail/bdlmahkjmklokkcnbcechpoafneippip')
 });
 
 $("#githublink").click(function(){
   window.open('https://github.com/ccizm/PMS-Tools')
 });
+
+$("#PTlink").click(function(){
+    window.open('./files/PMS-Tool.zip')
+  });
